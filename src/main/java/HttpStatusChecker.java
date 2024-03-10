@@ -19,38 +19,6 @@ import java.rmi.ConnectException;
 public class HttpStatusChecker {
 
 
-//    public static String getStatusImage(int code) throws IOException {
-//        String requestQuery = "https://http.cat/status/" + code;
-//
-//        String resultCat = "";
-//
-//        try {
-//            Connection connection = Jsoup.connect(requestQuery);
-//
-//            Document documents = connection.ignoreContentType(true).get();
-//
-//            Document document = Jsoup.parse(String.valueOf(documents));
-//
-//            Elements getCodeTitle = document.getElementsByClass("text-center my-12");
-//            Elements metaElements = document.select("meta[property=og:image]");
-//
-//            if (!getCodeTitle.isEmpty() && !metaElements.isEmpty()) {
-//                String cleanGetCodeTitle = getCodeTitle.toString().replaceAll("<h1 class=\"text-center my-12\">", "").replaceAll("<!-- --> <!-- -->", " ").replaceAll("</h1>", "");
-//                String cleanMetaElements = metaElements.toString().replaceAll("<meta property=\"og:image\" content=\"", "").replaceAll("\">", "");
-//
-//                resultCat = cleanGetCodeTitle + " " + cleanMetaElements;
-//            } else {
-//                System.out.println("https://http.cat/status/404");
-//            }
-//
-//        } catch (ConnectException connectException) {
-//            throw new EOFException(connectException.toString());
-//        }
-//
-//        return resultCat;
-//    }
-
-
     public static String getStatusImage(int code) throws IOException {
         String requestQuery = "https://http.cat/status/" + code;
 
